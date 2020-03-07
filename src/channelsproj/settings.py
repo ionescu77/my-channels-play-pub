@@ -25,12 +25,13 @@ SECRET_KEY = 'rihl*_z%=2+vd3&5-#0w-2lxrz1ii)_+awe$f6s()8jn!)8+9a'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["0.0.0.0", "127.0.0.1"]
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'notifier',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
