@@ -1,5 +1,5 @@
 # Channels 2 & WebSocket
----
+
 ![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/ionescu77/my-channels-play-pub?color=green)
 ![Python](https://img.shields.io/badge/Python-3.7-blue)
 ![Channels](https://img.shields.io/badge/Channels-2.4-blue)
@@ -42,7 +42,7 @@ python ./manage.py runserver
 ```
 - terminal output:
 
-![runserver terminal output](https://github.com/ionescu77/my-channels-play-pub/images/Screenshot 2020-03-08 at 16.14.37.png)
+![runserver terminal output](https://github.com/ionescu77/my-channels-play-pub/blob/master/images/Screenshot%202020-03-08%20at%2016.14.37.png)
 
 - open http://127.0.0.1:8000 in web-browser
 - this will open a socket connection to the backend
@@ -52,7 +52,7 @@ document.ws.send("Send via socket!")
 ```
 - use developer tools (console) to see the socket messages
 
-![runserver terminal output](https://github.com/ionescu77/my-channels-play-pub/images/Screenshot 2020-03-08 at 15.58.39.png)
+![chrome devtools](https://github.com/ionescu77/my-channels-play-pub/blob/master/images/Screenshot%202020-03-08%20at%2015.58.39.png)
 
 - read more about debugging sockets: <https://mtyiu.github.io/csci4140-spring15/tutorials/9/ws-debug/>
 
@@ -60,5 +60,6 @@ document.ws.send("Send via socket!")
 
 ---
 ## Notes
-Based on the [youtube video of Arun](https://youtu.be/G_EM5WM_08Q), however had to handle the soccket with the default WebSocket implementation in HTML5 as `websocketbridge.js` was not included anymore in channels >2.4.
-Also used the first 35 mins of [CodingForEntrepreneurs youtube video on Channels 2](https://youtu.be/RVH05S1qab8)
+Based on the [youtube video of Arun](https://youtu.be/G_EM5WM_08Q), however I had to handle the socket connection with the default WebSocket implementation in HTML5 as `websocketbridge.js` was not included anymore in channels >2.4.
+
+I also watched the first 35 mins of [CodingForEntrepreneurs youtube video on Channels 2](https://youtu.be/RVH05S1qab8) to get another view at this topic.
