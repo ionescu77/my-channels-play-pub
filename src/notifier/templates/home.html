@@ -1,8 +1,43 @@
+{% load staticfiles %}
 <html>
  <head>
   <title>Notifier</title>
- </head>
+  <!-- Note that websocketbridge was dropped by channels in this commit
+     https://github.com/django/channels/blob/b0f8d368de89bc3d6dd509c2d169b8504ad86793/channels/static/channels/js/websocketbridge.js -->
+     <script type = "text/javascript">
+      function WebSocketTest() {
+         if ("WebSocket" in window) {
+            // Let us open a web socket
+            var endpoint = ''
+            var ws = new WebSocket("ws://"+ window.location.host + "/ws/");
+
+            ws.addEventListener('open', function(e) {
+               ws.send("Want to connect me!");
+               console.log("Message is sent to Obi-Wan Kenobi.");
+            });
+
+            ws.onmessage = function (event) {
+              console.log(event.data);
+            };
+
+            ws.addEventListener('error', function(err) {
+               console.log('WebSocket Error: ', err);
+            });
+            document.ws = ws;
+            // ws.addEventListener('close', function(e) {
+            //    ws.close();
+            //    console.log("WebSocket connection closed.");
+            // });
+          } else {
+            // The browser doesn't support WebSocket
+            alert("WebSocket NOT supported by your Browser!");
+         }
+      }
+   </script> </head>
  <body>
   <h1>Notifier</h1>
+  <script>
+  document.addEventListener('DOMContentLoaded', WebSocketTest())
+  </script>
  </body>
 </html>
