@@ -42,7 +42,11 @@ python ./manage.py runserver
 ```
 - terminal output:
 
-![runserver terminal output](https://github.com/ionescu77/my-channels-play-pub/blob/master/images/Screenshot%202020-03-08%20at%2016.14.37.png)
+![runserver terminal output]()
+
+<p align="center">
+  <img width="70%" src="https://github.com/ionescu77/my-channels-play-pub/blob/master/images/Screenshot%202020-03-08%20at%2016.14.37.png">
+</p>
 
 - open http://127.0.0.1:8000 in web-browser
 - this will open a socket connection to the backend
@@ -52,9 +56,14 @@ document.ws.send("Send via socket!")
 ```
 - use developer tools (console) to see the socket messages
 
-![chrome devtools](https://github.com/ionescu77/my-channels-play-pub/blob/master/images/Screenshot%202020-03-08%20at%2015.58.39.png)
+<p align="center">
+  <img width="50%" src="https://github.com/ionescu77/my-channels-play-pub/blob/master/images/Screenshot%202020-03-08%20at%2015.58.39.png">
+</p>
 
-- read more about debugging sockets: <https://mtyiu.github.io/csci4140-spring15/tutorials/9/ws-debug/>
+![chrome devtools]()
+
+- read more about debugging sockets:
+<https://mtyiu.github.io/csci4140-spring15/tutorials/9/ws-debug/>
 
 
 
