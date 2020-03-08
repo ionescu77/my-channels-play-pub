@@ -40,14 +40,6 @@ pip install -r requirements.txt
 cd src
 python ./manage.py runserver
 ```
-- terminal output:
-
-![runserver terminal output]()
-
-<p align="center">
-  <img width="70%" src="https://github.com/ionescu77/my-channels-play-pub/blob/master/images/Screenshot%202020-03-08%20at%2016.14.37.png">
-</p>
-
 - open http://127.0.0.1:8000 in web-browser
 - this will open a socket connection to the backend
 - you can send more messages from console:
@@ -60,15 +52,21 @@ document.ws.send("Send via socket!")
   <img width="50%" src="https://github.com/ionescu77/my-channels-play-pub/blob/master/images/Screenshot%202020-03-08%20at%2015.58.39.png">
 </p>
 
-![chrome devtools]()
+- terminal output:
+
+<p align="center">
+  <img width="70%" src="https://github.com/ionescu77/my-channels-play-pub/blob/master/images/Screenshot%202020-03-08%20at%2016.14.37.png">
+</p>
 
 - read more about debugging sockets:
 <https://mtyiu.github.io/csci4140-spring15/tutorials/9/ws-debug/>
 
 
-
----
 ## Notes
+### Sources:
+- Arun Ravindran
 Based on the [youtube video of Arun](https://youtu.be/G_EM5WM_08Q), however I had to handle the socket connection with the default WebSocket implementation in HTML5 as `websocketbridge.js` was not included anymore in channels >2.4.
-
+- CodingForEntrepreneurs
 I also watched the first 35 mins of [CodingForEntrepreneurs youtube video on Channels 2](https://youtu.be/RVH05S1qab8) to get another view at this topic.
+- Other Resources
+https://www.pegaxchange.com/2018/03/23/websocket-client/
