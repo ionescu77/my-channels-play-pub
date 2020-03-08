@@ -12,7 +12,7 @@ python3 --version
 ```
 - create virtualenvironment
 ```bash
-python3 -m venv my-channels-play-pub
+python3 -m venv .
 ```
 - activate the virtualenvironment
 ```bash
