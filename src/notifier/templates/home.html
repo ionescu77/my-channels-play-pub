@@ -13,13 +13,16 @@
 
      <div id="status">Conecting to the app…</div>
 
-     <ul id="messages"></ul>
-
      <form id="form-msg" action="#" method="post">
        <textarea id="msg" placeholder="Write your msg here!" required></textarea>
        <button type="submit">Send msg</button>
        <button type="button" id="close">Close connection</button>
      </form>
+
+     <h2>Messages:</h2>
+
+     <ul id="messages"></ul>
+
    </div>
    <script src="{% static 'app.js' %}"></script>
  </body>
