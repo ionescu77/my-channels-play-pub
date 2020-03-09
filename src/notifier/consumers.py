@@ -21,7 +21,7 @@ class EchoConsumer(AsyncConsumer):
             # Echo the received payload
         await self.send({
             "type":"websocket.send",
-            "text": "I got: " + front_text
+            "text": "SERVER: " + front_text
         })
 
     async def websocket_disconnect(self, event):
