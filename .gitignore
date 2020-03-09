@@ -5,7 +5,7 @@ git_log.txt
 bin/
 include/
 lib/
-static/
+./static/
 media/
 
 pip-selfcheck.json
