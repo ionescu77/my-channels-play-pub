@@ -1,6 +1,7 @@
 import asyncio
 import json
 from channels.consumer import AsyncConsumer
+from channels.generic.websocket import AsyncJsonWebsocketConsumer
 
 class EchoConsumer(AsyncConsumer):
     async def websocket_connect(self, event):
@@ -12,7 +13,11 @@ class EchoConsumer(AsyncConsumer):
             "type":"websocket.send",
             "text": "Got your connection"
         })
+        await self.send({"type":"websocket.send", "text":"tick..."})
         await asyncio.sleep(5)
+        await self.send({"type":"websocket.send", "text":"...tock"})
+        await asyncio.sleep(5)
+
 
     async def websocket_receive(self, event):
         print ("receive", event)
@@ -21,7 +26,7 @@ class EchoConsumer(AsyncConsumer):
             # Echo the received payload
         await self.send({
             "type":"websocket.send",
-            "text": "I got: " + front_text
+            "text": "SERVER: " + front_text
         })
 
     async def websocket_disconnect(self, event):
